@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>HomePage</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="img">
+                <div>
+                    <img class="logo" src="../images/icon-astronout.svg" alt="">
+                </div>
+            </div>  
+            <div class="menu"> 
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="https://github.com/walissonlucas" target="_blank">Walisson Lucas Sabino dos Santos (GitHub)</a></li>
+                    </ul>
+                </nav>
+            </div>     
+        </div>
+    </header>
+
+    <main class="boxGrid">
+        <div class="container2">
+            <div class="scene">
+                <div class="rocket">
+                    <img src="../images/icon-rocket.png" alt="">
+                </div>
+            </div>
+            <script>
+                function stars(){
+                    let count = 150;
+                    let scene = document.querySelector('.scene');
+                    let i =0;
+                    while(i < count){
+                        let star = document.createElement('i');
+                        let x = Math.floor(Math.random() * window.innerWidth);
+                        let duration = Math.random() * 1;
+                        let h = Math.random() * 100;
+
+                        star.style.left = x + 'px';
+                        star.style.width = 1 + 'px';
+                        star.style.height = 60 + 'px';
+                        star.style.animationDuration = duration + 's';
+                        
+                        scene.appendChild(star);
+                        i++;
+                    }
+                }
+                stars();
+            </script>
+        </div>
+        <div class="container1">
+            <div class="conteudo">
+                <div class="content">
+                    <img src="../images/Frame-LUA.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>  
+    <footer>
+        <div class="foot">
+            <div class="section-itens">
+                <div class="section-share">
+                    <div class="section-icon instagran">
+                       <a href="https://www.instagram.com/walissonlucas.dev/" target="_blank"><img src="../images/—Pngtree—instagram color icon instagram logo_3547787 (1).png" /></a>
+                    </div>   
+                </div>
+
+                <div class="section-share">
+                    <div class="section-icon linkedin">
+                        <a href="https://www.linkedin.com/in/walisson-lucas-sabino-dos-santos-a47b32141/" target="_blank"><img src="../images/linkedin.png" /></a>
+                    </div>   
+                </div>
+
+                <div class="section-share">
+                    <div class="section-icon facebook">
+                        <a href="https://www.facebook.com/walisson.lucas.35" target="_blank"><img src="../images/facebook.png" /></a>
+                    </div>    
+                </div>
+
+                <div class="section-share">
+                    <div class="section-icon googleplus">
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img src="../images/googleplus.png" /></a>
+                    </div>
+                </div>    
+            </div>
+            <div>
+                <div class="text">
+                    <h3>WhatsApp: <br>(82) 99910-8845 </h3>
+                </div>
+            </div>
+        </div>
+    </footer>  
+</body>
+</html>

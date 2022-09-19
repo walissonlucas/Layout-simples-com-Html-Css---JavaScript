@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>LOGIN</title>
+    
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body{
+            background-color: #A5F3FC;
+        }
+        h2{
+            font-size: 25px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            text-align: center;
+            height: 0; 
+            margin-top: 250px;
+        }
+        p{
+            font-size: 15px;
+        }
+        h4{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;  
+            color: #1F2937;
+        }
+        .boxLogin{
+            background-color: white;
+            max-width: 300px;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 300px auto;
+            text-align: center;
+            margin-top: 70px;
+
+        }
+        input{
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+            border: 1px solid #D4D4D8;
+            border-radius: 5px;
+        }
+        #login, #senha{
+            padding: 15px;
+        }
+        #button{
+            color: white;
+            background-color: #1F2937;
+            transition: 0.8s;
+        }
+        #button:hover{
+            background-color: #15803D;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <h2>Pronto para decolar?</h2>
+        
+        
+        <div class="boxLogin">
+            <h4>Account Login</h4>
+            <!--O login é value="admin"-->
+            <input type="text" placeholder="Login" id="login" title="O login é admin">
+            <!--A senha é value="admin"--> 
+            <input type="password" placeholder="Password" id="senha" title="A senha é admin"> 
+            <input id="button" type="submit" value="Sign in" onclick="logar(); return false">
+            
+        </div>
+
+    </form>
+
+    <script>
+
+        function logar(){
+
+            let login = document.getElementById('login').value;
+            let senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Decolando em 3, 2, 1...');
+                location.href = "./HomePage/home.html";
+            } else {
+                alert('Login ou senha incorreto');
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
